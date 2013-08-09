@@ -18,7 +18,7 @@ You can set the Blur property for the pixels.
 ### Adjust Position
 You can choose the coordinates of pixel. [Pixel Size or twice the size of Pixel Size]
 
-### Shuffle Pixcel
+### Shuffle Pixel
 The coordinates of each pixels will be exported randomly.
 ######Note:the counts of the pixels are same.
 
@@ -52,7 +52,7 @@ box-shadowでは、各ピクセルは指定値から各辺2倍の大きさで表
 ### Adjust Position
 各ピクセルの座標の単位をPixel Sizeにするか、Pixel Sizeの2倍にするかを選択できます。
 
-### Shuffle Pixcel
+### Shuffle Pixel
 各ピクセルの座標をランダムに出力します。
 
 ### Export CSS Code
