@@ -16,7 +16,7 @@ box-shadow`s visual will be rough like a mosaic image if the 'Pixel Size' get bi
 You can set the Blur property for the pixels.
 
 ### Adjust Position
-You can choose the coordinates of pixel. [Pixel Size or twice the size of the Pixel Size]
+You can choose the coordinates of pixel. [Pixel Size or twice the size of Pixel Size]
 
 ### Shuffle Pixcel
 The coordinates of each pixels will be exported randomly.
