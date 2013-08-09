@@ -15,7 +15,7 @@ box-shadowでは、各ピクセルは指定値から各辺2倍の大きさで表
 ### Blur
 各ピクセルのblurの量を指定できます。
 
-#### Adjest Position
+#### Adjust Position
 各ピクセルの座標の単位をPixel Sizeにするか、Pixel Sizeの2倍にするかを選択できます。
 
 ### Shuffle Pixcel
@@ -25,4 +25,4 @@ box-shadowでは、各ピクセルは指定値から各辺2倍の大きさで表
 box-shadowの値のみを出力するか、CSSのセレクタコードとして出力するかを選択できます。
 
 ### Preview
-Executeすると、結果をWebViewのプレビューで確認できます。
+Executeすると、結果をWebkitプレビューで確認できます。
