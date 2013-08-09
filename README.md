@@ -15,7 +15,7 @@ box-shadow`s visual will be rough like a mosaic image if the 'Pixel Size' get bi
 ### Blur
 You can set the Blur property for the pixels.
 
-#### Adjust Position
+### Adjust Position
 You can choose the coordinates of pixel. [Pixel Size or twice the size of the Pixel Size]
 
 ### Shuffle Pixcel
@@ -49,7 +49,7 @@ box-shadowでは、各ピクセルは指定値から各辺2倍の大きさで表
 ### Blur
 各ピクセルのblurの量を指定できます。
 
-#### Adjust Position
+### Adjust Position
 各ピクセルの座標の単位をPixel Sizeにするか、Pixel Sizeの2倍にするかを選択できます。
 
 ### Shuffle Pixcel
