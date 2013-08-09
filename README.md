@@ -7,8 +7,8 @@ How To Use
 ----------
 
 ### Pixel Size
-You can set the size of 1dot.
-box-shadow`s visual will be rough like a mosaic image if the 'Pixel Size' get bigger.
+You can set the size of 1dot.  
+Your box-shadow`s visual will be rough like a mosaic image if the 'Pixel Size' get bigger.
 ######Note:According to the box-shadow`s rule, each pixels are displayed twice the size of 'Pixel Size' basically.  
 ######Note:You can not set the bigger size than Image size to the 'Pixel Size'.
 
