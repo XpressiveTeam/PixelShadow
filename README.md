@@ -28,7 +28,7 @@ The data will be exported as a css selector or the only box-shadow`s data.
 ### Preview
 You can check the result with Webkit preview after the execution.
 
-###Note:Please do not open the big images.It crashes.
+######Note:Please do not open the big images.It crashes.
 
 
 
@@ -58,5 +58,5 @@ box-shadowでは、各ピクセルは指定値から各辺2倍の大きさで表
 ### Export CSS Code
 box-shadowの値のみを出力するか、CSSのセレクタコードとして出力するかを選択できます。
 
-### Preview
+######Preview
 Executeすると、結果をWebkitプレビューで確認できます。
