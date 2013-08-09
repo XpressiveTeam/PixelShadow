@@ -1,7 +1,7 @@
 PixelShadow
 ===========
 Pixel Shadow is a tool that generates the pixel data for CSS3 box-shadow from any images.
-Note:Be carefull.It`s not the tool to create the "Drop Shadow".
+#####Note:Be carefull.It`s not the tool to create the "Drop Shadow".
 
 How To Use
 ----------
