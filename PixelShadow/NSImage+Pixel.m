@@ -27,23 +27,33 @@
 
 - (NSImage *)imageWithScale:(NSSize)scale
 {
+	
 	NSRect rect = NSZeroRect;
 	NSRect new_rect = NSZeroRect;
 	rect.size = [self size];
 	new_rect.size.width = (int)(rect.size.width * scale.width);
 	new_rect.size.height = (int)(rect.size.height * scale.height);
+
+	NSBitmapImageRep *rep = [[NSBitmapImageRep alloc]
+							 initWithBitmapDataPlanes:NULL
+							 pixelsWide:new_rect.size.width
+							 pixelsHigh:new_rect.size.height
+							 bitsPerSample:8
+							 samplesPerPixel:4
+							 hasAlpha:YES
+							 isPlanar:NO
+							 colorSpaceName:NSCalibratedRGBColorSpace
+							 bytesPerRow:0
+							 bitsPerPixel:0];
+	[rep setSize:new_rect.size];
 	
-	NSImage *newImage = [[NSImage alloc] initWithSize:new_rect.size];
-	
-	[newImage lockFocus];
 	[NSGraphicsContext saveGraphicsState];
-	[[NSGraphicsContext currentContext] setImageInterpolation:NSImageInterpolationHigh];
-	[self drawInRect:new_rect
-			 fromRect:NSZeroRect
-			operation:NSCompositeSourceOver
-			 fraction:1.0];
+	[NSGraphicsContext setCurrentContext:[NSGraphicsContext graphicsContextWithBitmapImageRep:rep]];
+	[self drawInRect:new_rect fromRect:NSZeroRect operation:NSCompositeCopy fraction:1.0];
 	[NSGraphicsContext restoreGraphicsState];
-	[newImage unlockFocus];
+	
+	NSData *data = [rep representationUsingType:NSPNGFileType properties:nil];
+	NSImage *newImage = [[NSImage alloc] initWithData:data];
 	
 	return newImage;
 }

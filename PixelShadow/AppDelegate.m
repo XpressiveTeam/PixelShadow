@@ -29,11 +29,26 @@
 
 - (void)loadFile:(NSURL *)fileURL
 {
-	loadedImage = [[NSImage alloc] initWithContentsOfURL:fileURL];
-	imageWell.image = loadedImage;
+	NSImage *image = [[NSImage alloc] initWithContentsOfURL:fileURL];
 	
-	int w = loadedImage.size.width;
-	int h = loadedImage.size.height;
+	int w = image.size.width;
+	int h = image.size.height;
+	
+	long maxPixel;
+	
+	if( [self.window backingScaleFactor] == 2 ){//retina
+		maxPixel = 250 * 250;
+	}else{
+		maxPixel = 500 * 500;
+	}
+	
+	if( w * h > maxPixel ){
+		[self alertWithTitle:@"Image Size Error" message:[NSString stringWithFormat:@"Image Size must be less than %g x %g.", sqrt(maxPixel), sqrt(maxPixel)]];
+		return;
+	}
+	
+	loadedImage = image;
+	imageWell.image = loadedImage;
 	
 	[imageScroller.contentView scrollToPoint:NSZeroPoint];
 	[imageWell setFrameSize:NSMakeSize(w, h)];

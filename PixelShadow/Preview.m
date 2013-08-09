@@ -8,6 +8,7 @@
 	[self setMainFrameURL:indexPath];
 	
 	[self setDrawsBackground:NO];
+	
 }
 
 - (void)applyBoxShadowValue:(NSString *)value
@@ -72,8 +73,14 @@
 
 }
 
-- (NSScrollView *)mainScrollView {
-    return [[[[self mainFrame] frameView] documentView] enclosingScrollView];
+- (NSView<WebDocumentView> *)documentView
+{
+	return [[[self mainFrame] frameView] documentView];
+}
+
+- (NSScrollView *)mainScrollView
+{
+    return [[self documentView] enclosingScrollView];
 }
 
 
