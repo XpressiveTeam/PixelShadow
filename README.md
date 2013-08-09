@@ -58,5 +58,5 @@ box-shadowでは、各ピクセルは指定値から各辺2倍の大きさで表
 ### Export CSS Code
 box-shadowの値のみを出力するか、CSSのセレクタコードとして出力するかを選択できます。
 
-######Preview
+### Preview
 Executeすると、結果をWebkitプレビューで確認できます。
